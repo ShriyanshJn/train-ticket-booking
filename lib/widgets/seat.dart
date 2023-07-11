@@ -25,12 +25,15 @@ class Seat extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.023,
                 ),
-                Text(
-                  seatNumber.toString(),
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w700,
-                    fontSize: MediaQuery.of(context).size.height * 0.022,
+                FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Text(
+                    seatNumber.toString(),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.w700,
+                      fontSize: MediaQuery.of(context).size.height * 0.022,
+                    ),
                   ),
                 ),
                 FittedBox(
