@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'seat.dart';
 
 class Compartment extends StatelessWidget {
-  const Compartment({Key? key, required this.compartmentSeatStartNumber})
+  const Compartment({Key? key, required this.compartmentSeatStartNumber,required this.selectedSeatNumber})
       : super(key: key);
   final int compartmentSeatStartNumber;
+  final int? selectedSeatNumber;
   static const restColor = Color.fromARGB(255, 112, 189, 240);
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,19 @@ class Compartment extends StatelessWidget {
                           seatNumber: compartmentSeatStartNumber,
                           seatType: 'LOWER',
                           isUp: true,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber,
                         ),
                         Seat(
                           seatNumber: compartmentSeatStartNumber + 1,
                           seatType: 'MIDDLE',
                           isUp: true,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber+1,
                         ),
                         Seat(
                           seatNumber: compartmentSeatStartNumber + 2,
                           seatType: 'UPPER',
                           isUp: true,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber+2,
                         ),
                       ],
                     ),
@@ -84,6 +88,7 @@ class Compartment extends StatelessWidget {
                       seatNumber: compartmentSeatStartNumber + 6,
                       seatType: 'SIDE LOWER',
                       isUp: true,
+                      isSelected: selectedSeatNumber == compartmentSeatStartNumber+6,
                     ),
                     Positioned(
                       top: 0,
@@ -135,16 +140,19 @@ class Compartment extends StatelessWidget {
                           seatNumber: compartmentSeatStartNumber + 3,
                           seatType: 'LOWER',
                           isUp: false,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber+3,
                         ),
                         Seat(
                           seatNumber: compartmentSeatStartNumber + 4,
                           seatType: 'MIDDLE',
                           isUp: false,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber+4,
                         ),
                         Seat(
                           seatNumber: compartmentSeatStartNumber + 5,
                           seatType: 'UPPER',
                           isUp: false,
+                          isSelected: selectedSeatNumber == compartmentSeatStartNumber+5,
                         ),
                       ],
                     ),
@@ -192,6 +200,7 @@ class Compartment extends StatelessWidget {
                       seatNumber: compartmentSeatStartNumber + 7,
                       seatType: 'SIDE UPPER',
                       isUp: false,
+                      isSelected: selectedSeatNumber == compartmentSeatStartNumber+7,
                     ),
                     Positioned(
                       bottom: 0,
