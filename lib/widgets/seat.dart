@@ -14,7 +14,7 @@ class Seat extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.15,
       height: MediaQuery.of(context).size.height * 0.08,
-      margin: const EdgeInsets.all(4),
+      margin: const EdgeInsets.all(1),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.6),
