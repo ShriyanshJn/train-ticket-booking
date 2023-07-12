@@ -3,13 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 class TextFieldButton extends StatelessWidget {
   const TextFieldButton({super.key});
+  static const color = Color.fromARGB(255, 112, 189, 240);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
-        color: Theme.of(context).colorScheme.inversePrimary,
+        color: color,
       ),
       child: Theme(
         data: ThemeData(
@@ -19,7 +20,7 @@ class TextFieldButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+            backgroundColor: color,
             elevation: 0,
             splashFactory: NoSplash.splashFactory,
           ),

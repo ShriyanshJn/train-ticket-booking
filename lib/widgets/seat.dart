@@ -9,6 +9,7 @@ class Seat extends StatelessWidget {
   final int seatNumber;
   final String seatType;
   final bool isUp;
+  static const restColor = Color.fromARGB(255, 88, 222, 255);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +32,7 @@ class Seat extends StatelessWidget {
                     seatNumber.toString(),
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                       fontSize: MediaQuery.of(context).size.height * 0.022,
                     ),
                   ),
@@ -72,7 +73,7 @@ class Seat extends StatelessWidget {
                   seatNumber.toString(),
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     fontSize: MediaQuery.of(context).size.height * 0.022,
                   ),
                 ),
