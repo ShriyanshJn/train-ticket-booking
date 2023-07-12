@@ -4,14 +4,14 @@ import 'package:animate_do/animate_do.dart';
 
 import '../widgets/compartment.dart';
 
-class SeatFinderScreen extends StatefulWidget {
-  const SeatFinderScreen({Key? key}) : super(key: key);
+class SeatFinderScreenPortrait extends StatefulWidget {
+  const SeatFinderScreenPortrait({Key? key}) : super(key: key);
 
   @override
-  State<SeatFinderScreen> createState() => _SeatFinderScreenState();
+  State<SeatFinderScreenPortrait> createState() => _SeatFinderScreenPortraitState();
 }
 
-class _SeatFinderScreenState extends State<SeatFinderScreen> {
+class _SeatFinderScreenPortraitState extends State<SeatFinderScreenPortrait> {
   final _textController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   final FocusScopeNode _focusScopeNode = FocusScopeNode();
