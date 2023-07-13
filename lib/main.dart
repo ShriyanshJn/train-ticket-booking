@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:train_ticket_booking/screens/screen.dart';
+import 'package:flutter/services.dart';
 
-import 'package:train_ticket_booking/screens/seat_finder_screen_portrait.dart';
-import 'package:train_ticket_booking/screens/seat_finder_screen_landscape.dart';
+import 'package:train_ticket_booking/screens/seat_finder_screen.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(236, 87, 216, 233),
 );
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: kColorScheme,
       ),
-      home: const Screen(portraitBody: SeatFinderScreenPortrait(),landscapeBody: SeatFinderScreenLandscape(),),
+      home: const SeatFinderScreen(),
     );
   }
 }
