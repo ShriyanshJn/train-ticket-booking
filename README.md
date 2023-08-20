@@ -1,6 +1,6 @@
 # train_ticket_booking
 
-A new Flutter project.
+An app prototype feature developed to allow users find their desired seat with smooth UI and minimal animations.
 
 ## Getting Started
 
